@@ -1,9 +1,13 @@
 search {
-    align-items: center;
-    direction: row;
+    direction: column;
+    gap:10;
 }
 
-items {
+list {
     align-items: center;
+
     direction: row;
+    gap: 60;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
