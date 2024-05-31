@@ -5,9 +5,13 @@ search {
 
 list {
     align-items: center;
-
+    width: 600px;
     direction: row;
     gap: 60;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+center {
+    align-items: center;
 }
