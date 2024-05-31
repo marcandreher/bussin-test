@@ -5,7 +5,6 @@ search {
 
 list {
     align-items: center;
-    width: 600px;
     direction: row;
     gap: 60;
     margin-top: 20px;
@@ -13,7 +12,9 @@ list {
 }
 
 textbox {
-    width: 600px;
+    
+    width: 800px;
+    height: 100px;
 }
 
 center {
