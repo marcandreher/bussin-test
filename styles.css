@@ -12,6 +12,10 @@ list {
     margin-bottom: 20px;
 }
 
+textbox {
+    width: 600px;
+}
+
 center {
     align-items: center;
 }
