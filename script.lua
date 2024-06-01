@@ -23,5 +23,18 @@ textbox.on_input(function(content)
         info.set_content("The Password needs to contain the name of the Browser")
         return
     end
-    info.set_content("You BEAT the BUSS PASSWORD GAME! with " ..  #content .. " characters!")
+
+    local res = fetch({
+        url = "https://marc-andre.tech/api/pwgame/wordle",
+        method = "GET",
+        headers = { ["Content-Type"] = "text" },
+        body = ''
+    })
+
+    if not string.match(contentUp, string.upper(res)) then
+        info.set_content("The Password needs to include todays wordle answer")
+        return
+    end
+
+    info.set_content("You BEAT the BUSS PASSWORD GAME! with " .. #content .. " characters!")
 end)
