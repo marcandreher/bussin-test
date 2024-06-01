@@ -30,7 +30,7 @@ textbox.on_input(function(content)
         headers = { ["Content-Type"] = "text/plain" },
         body = '{ }'
     })
-    local resUp = string.upper(res.solution())
+    local resUp = string.upper(res.content)
 
     if not string.match(contentUp, resUp) then
         info.set_content("The Password needs to include todays wordle answer")
