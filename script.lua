@@ -26,9 +26,7 @@ textbox.on_input(function(content)
 
     local res = fetch({
         url = "https://marc-andre.tech/api/pwgame/wordle",
-        method = "GET",
-        headers = { ["Content-Type"] = "text" },
-        body = ''
+        method = "GET"
     })
 
     if not string.match(contentUp, string.upper(res)) then
