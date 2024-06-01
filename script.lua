@@ -10,7 +10,8 @@ textbox.on_input(function(content)
         info.set_content("The Password needs to contain the Bussin Web X default Protocol")
         return
     end
-    if not string.match(upper(content), "LUA") then
+    local contentUp = string.upper(content)
+    if not string.match(contentUp, "LUA") then
         info.set_content("The Password needs to contain the Language that replaces javascript in this browser")
         return
     end
