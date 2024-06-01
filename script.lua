@@ -15,5 +15,13 @@ textbox.on_input(function(content)
         info.set_content("The Password needs to contain the Language that replaces javascript in this browser")
         return
     end
-    info.set_content("You BEAT the BUSS PASSWORD GAME!")
+    if not string.match(content, "141") then
+        info.set_content("Math Question: What are the first three digits of Pi after the decimal point?")
+        return
+    end
+    if not string.match(contentUp, "WEBX") or not string.match(contentUp, "WEB X") then
+        info.set_content("The Password needs to contain the name of the Browser")
+        return
+    end
+    info.set_content("You BEAT the BUSS PASSWORD GAME! with " ..  #content .. " characters!")
 end)
