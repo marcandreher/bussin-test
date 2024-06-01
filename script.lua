@@ -10,5 +10,9 @@ textbox.on_input(function(content)
         info.set_content("The Password needs to contain the Bussin Web X default Protocol")
         return
     end
+    if not string.match(upper(content), "LUA") then
+        info.set_content("The Password needs to contain the Language that replaces javascript in this browser")
+        return
+    end
     info.set_content("You BEAT the BUSS PASSWORD GAME!")
 end)
